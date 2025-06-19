@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int wall_length, wall_breadth;
+    int p1_length, p1_breadth;
+    int p2_length, p2_breadth;
+
+    scanf("%d %d", &wall_length, &wall_breadth);
+    scanf("%d %d", &p1_length, &p1_breadth);
+    scanf("%d %d", &p2_length, &p2_breadth);
+
+    int wall_area = wall_length * wall_breadth;
+    int p1_area = p1_length * p1_breadth;
+    int p2_area = p2_length * p2_breadth;
+
+    if (p1_area + p2_area <= wall_area) {
+        printf("Raj can fix both painting\n");
+    } else {
+        printf("Raj cannot fix both painting\n");
+    }
+
+    return 0;
+}
