@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+int main() {
+    int dept;
+    char event;
+    printf("Welcome to AsInTra\n");
+    printf("1.CSE\n2.ECE\n3.MECH\n4.CIVIL\n");
+    printf("Enter Department\n");
+    scanf("%d", &dept);
+    switch(dept) {
+        case 1:
+            printf("Go Straight\n");
+            printf("Welcome to CSE Department\n");
+            break;
+        case 2:
+            printf("Go Right\n");
+            printf("Welcome to ECE Department\n");
+            break;
+        case 3:
+            printf("Go Left\n");
+            printf("Welcome to MECH Department\n");
+            break;
+        case 4:
+            printf("Go Straight and turn Left\n");
+            printf("Welcome to CIVIL Department\n");
+            break;
+        default:
+            printf("Invalid Department\n");
+            return 0;
+    }
+    printf("a.Coding\nb.Web Designing\nc.Database\n");
+    printf("Enter Event\n");
+    scanf(" %c", &event); 
+    switch(event) {
+        case 'a':
+            printf("Go to hall S108\n");
+            break;
+        case 'b':
+            printf("Go to hall S207\n");
+            break;
+        case 'c':
+            printf("Go to hall S309\n");
+            break;
+        default:
+            printf("Invalid Event\n");
+    }
+
+    return 0;
+}
