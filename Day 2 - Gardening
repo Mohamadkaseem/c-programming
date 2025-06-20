@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main() {
+    int rows, cols, tree_num;
+    scanf("%d %d %d", &rows, &cols, &tree_num);
+    int total_trees = rows * cols;
+    int second_col_start = rows + 1;
+    int second_col_end = 2 * rows;
+    int second_last_col_start = (cols - 2) * rows + 1;
+    int second_last_col_end = (cols - 1) * rows;
+    if ((tree_num >= second_col_start && tree_num <= second_col_end) ||
+        (tree_num >= second_last_col_start && tree_num <= second_last_col_end)) {
+        printf("It is a mango tree\n");
+    } else {
+        printf("It is not a mango tree\n");
+    }
+    return 0;
+}
