@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+    int a, b;
+    char op;
+
+    // Input two integers
+    scanf("%d", &a);
+    scanf("%d", &b);
+    // Input operator
+    scanf(" %c", &op); // Space before %c handles newline issues
+
+    switch(op) {
+        case '+':
+            printf("Addition of two number is %.1f\n", (float)(a + b));
+            break;
+        case '-':
+            printf("Subtraction of two number is %.1f\n", (float)(a - b));
+            break;
+        case '*':
+            printf("Multiplication of two number is %.1f\n", (float)(a * b));
+            break;
+        case '/':
+            if (b != 0)
+                printf("Division of two number is %.1f\n", (float)a / b);
+            else
+                printf("Division by zero error\n");
+            break;
+        case '%':
+            if (b != 0)
+                printf("Modulo of two number is %.1f\n", (float)(a % b));
+            else
+                printf("Modulo by zero error\n");
+            break;
+        default:
+            printf("Invalid Input\n");
+    }
+
+    return 0;
+}
